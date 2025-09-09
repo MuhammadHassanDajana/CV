@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Mudassar Yamin - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Embedded Tailwind CSS (minified subset for used classes) */
+        .fixed{position:fixed}.top-0{top:0}.left-0{left:0}.right-0{right:0}.z-1000{z-index:1000}.z-1100{z-index:1100}.m-0{margin:0}.mb-4{margin-bottom:1rem}.mx-0{margin-left:0;margin-right:0}.ml-5{margin-left:1.25rem}.mr-4{margin-right:1rem}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}.h-full{height:100%}.w-24{width:6rem}.w-full{width:100%}.h-64{height:16rem}.max-w-5xl{max-width:80rem}.cursor-pointer{cursor:pointer}.list-disc{list-style-type:disc}.overflow-y-auto{overflow-y:auto}.border{border-width:1px}.border-0{border-width:0}.border-gray-200{border-color:#E2E8F0}.rounded-lg{border-radius:0.5rem}.bg-white{background-color:#fff}.bg-gray-100{background-color:#F7FAFC}.bg-teal-500{background-color:#38B2AC}.bg-gray-800{background-color:#2D3748}.bg-gray-900{background-color:#1A202C}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-0{padding-left:0;padding-right:0}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.font-inter{font-family:'Inter',sans-serif}.font-poppins{font-family:'Poppins',sans-serif}.text-base{font-size:1rem}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}.font-bold{font-weight:700}.text-white{color:#fff}.text-gray-500{color:#6B7280}.text-gray-600{color:#4A5568}.text-gray-200{color:#E2E8F0}.text-teal-500{color:#38B2AC}.text-teal-700{color:#2C7A7B}.no-underline{text-decoration:none}.shadow{box-shadow:0 4px 6px rgba(0,0,0,0.1)}.transition{transition-property:all;transition-duration:300ms}.transform{transform:translate(0,0)}.hover\:translate-y-1:hover{transform:translateY(-0.25rem)}.hover\:shadow-lg:hover{box-shadow:0 10px 15px rgba(0,0,0,0.1)}.hover\:text-teal-700:hover{color:#2C7A7B}.hover\:underline:hover{text-decoration:underline}.hover\:bg-gray-50:hover{background-color:#F9FAFB}.hover\:bg-gray-700:hover{background-color:#374151}.relative{position:relative}.inline-flex{display:inline-flex}.gap-2{gap:0.5rem}.rounded-full{border-radius:9999px}.h-32{height:8rem}.w-32{width:8rem}.object-cover{object-fit:cover}.grid{display:grid}.gap-4{gap:1rem}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:1024px){.lg\:w-48{width:12rem}.lg\:ml-52{margin-left:13rem}.lg\:p-4{padding:1rem}.lg\:w-24{width:6rem}.lg\:h-24{height:6rem}}@media (max-width:768px){.md\:ml-0{margin-left:0}.md\:p-2{padding:0.5rem}.md\:w-full{width:100%}.md\:w-20{width:5rem}.md\:h-20{height:5rem}}
+        /* Custom Styles */
+        :root {
+            --primary: #38B2AC;
+            --primary-dark: #2C7A7B;
+            --bg-light: #F7FAFC;
+            --bg-dark: #1A202C;
+            --text-light: #4A5568;
+            --text-dark: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-light: #1A202C;
+            --text-light: #E2E8F0;
+            --bg-dark: #2D3748;
+            --text-dark: #CBD5E0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #2C3E50;
+            color: white;
+            padding: 1.5rem;
+            overflow-y: auto;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+        .sidebar a {
+            color: #CBD5E0;
+            text-decoration: none;
+            display: block;
+            padding: 0.75rem 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .sidebar a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        .content {
+            margin-left: 220px;
+            padding: 2rem;
+            max-width: 1200px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1100;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1100;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+        .theme-toggle svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2D3748;
+        }
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
+            color: var(--text-dark);
+        }
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            color: var(--primary);
+        }
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
+        }
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
+        }
+        p, li {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+        .section {
+            background: white;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        [data-theme="dark"] .section {
+            background: var(--bg-dark);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        #instagram-feed {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EDF2F7;
+        }
+        [data-theme="dark"] #instagram-feed {
+            border-color: #4A5568;
+            background: #2D3748;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 8rem;
+            height: 8rem;
+            margin-right: 1rem;
+        }
+        .social-links svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: var(--primary);
+            transition: fill 0.3s;
+        }
+        .social-links a:hover svg {
+            fill: var(--primary-dark);
+        }
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        [data-theme="dark"] .news-card {
+            background: var(--bg-dark);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .news-card iframe {
+            width: 100%;
+            border: 0;
+            border-radius: 8px;
+        }
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 180px;
+            }
+            .content {
+                margin-left: 200px;
+                padding: 1.5rem;
+            }
+            .profile-pic {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                transform: translateX(-100%);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+            .hamburger {
+                display: block;
+            }
+            .profile-pic {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: clamp(1.8rem, 4.5vw, 2rem);
+            }
+            h2 {
+                font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+            }
+            h3 {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+            }
+            .section {
+                padding: 0.75rem;
+            }
+            #instagram-feed {
+                min-height: 150px;
+            }
+            .profile-pic {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleSidebar()" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+    </div>
+    <div class="sidebar" role="navigation" aria-label="Main navigation">
+        <h3 class="text-xl font-bold mb-4 text-white">Navigation</h3>
+        <a href="#summary" aria-label="Go to Professional Summary">Professional Summary</a>
+        <a href="#experience" aria-label="Go to Work Experience">Work Experience</a>
+        <a href="#education" aria-label="Go to Education">Education</a>
+        <a href="#certifications" aria-label="Go to Certifications">Certifications</a>
+        <a href="#skills" aria-label="Go to Skills">Skills</a>
+        <a href="#publications" aria-label="Go to Publications">Publications</a>
+        <a href="#lectures" aria-label="Go to Lectures and Presentations">Lectures & Presentations</a>
+        <a href="#awards" aria-label="Go to Awards">Awards</a>
+        <a href="#languages" aria-label="Go to Languages">Languages</a>
+        <a href="#news" aria-label="Go to News">News</a>
+        <a href="#hobbies" aria-label="Go to Hobbies and Travel">Hobbies & Travel</a>
+    </div>
+    <div class="content">
+        <header class="section" id="header">
+            <div class="flex items-center">
+                <img src="https://cache.sessionize.com/image/51f3-400o400o2-GM2xjTjTgYp1kU5NvtKJts.png" alt="Muhammad Mudassar Yamin Profile Picture" class="profile-pic">
+                <h1>Muhammad Mudassar Yamin</h1>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:muhammad.m.yamin@ntnu.no" aria-label="Email Muhammad Mudassar Yamin">muhammad.m.yamin@ntnu.no</a></p>
+                <p>Location: Gjøvik, Norway</p>
+                <div class="social-links flex gap-2">
+                    <a href="https://scholar.google.com/citations?user=Do_xVQMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="View Google Scholar Profile">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5.81 8.77L4 17h4l1.81-8.23L7.97 7.64 5.81 8.77zm10.69 2.46L14.69 17h4l1.81-8.23-1.81-1.13-1.69 2.59zM12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path>
+                        </svg>
+                        Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/mudassaryamin/" target="_blank" rel="noopener" aria-label="View LinkedIn Profile">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" id="summary">
+            <h2>Professional Summary</h2>
+            <p>Associate Professor at Norwegian University of Science and Technology (NTNU) with expertise in system security, penetration testing, and cyber ranges. Experienced Information Security consultant with multiple certifications and a Ph.D. in Cyber Security.</p>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Work Experience</h2>
+            <h3>Associate Professor</h3>
+            <p>Department of Information and Communication Technology, NTNU</p>
+            <p>2023 - Present</p>
+            <ul class="list-disc ml-5">
+                <li>Conduct research in system security, penetration testing, security assessment, and intrusion detection</li>
+                <li>Teach courses in cybersecurity</li>
+                <li>Supervise students</li>
+            </ul>
+            <h3>Postdoctoral Researcher</h3>
+            <p>NTNU</p>
+            <p>2022 - 2023</p>
+            <p>Project: "AI-based cyber range scenarios management and training"</p>
+            <h3>Ph.D. Candidate</h3>
+            <p>NTNU</p>
+            <p>2018 - 2022</p>
+            <p>Thesis: "Modelling and Analyzing Attack-Defense Scenarios for Cyber-Ranges"</p>
+            <h3>Information Security Consultant</h3>
+            <p>Prior to 2018</p>
+            <ul class="list-disc ml-5">
+                <li>Served multiple government and private clients</li>
+                <li>Performed security assessment of major financial institutions and critical infrastructure</li>
+            </ul>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/papers/Muhammad%20Mudassar%20Yamin.pdf" target="_blank" rel="noopener" aria-label="Ph.D. in Cyber Security, NTNU, 2022">Ph.D. in Cyber Security, NTNU, 2022</a></li>
+        </section>
+
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul class="list-disc ml-5">
+                <li>OSCE (Offensive Security Certified Expert)</li>
+                <li>OSCP (Offensive Security Certified Professional)</li>
+                <li>LPT-MASTER (Licensed Penetration Tester Master)</li>
+                <li>CEH (Certified Ethical Hacker)</li>
+                <li>CHFI (Computer Hacking Forensic Investigator)</li>
+                <li>CPTE (Certified Penetration Testing Engineer)</li>
+                <li>CISSO (Certified Information Systems Security Officer)</li>
+                <li>CBP (Certified Blockchain Professional)</li>
+            </ul>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+            <ul class="list-disc ml-5">
+                <li>System security</li>
+                <li>Penetration testing</li>
+                <li>Security assessment</li>
+                <li>Intrusion detection</li>
+                <li>Cyber ranges</li>
+                <li>Research and development</li>
+                <li>Teaching and supervision</li>
+            </ul>
+        </section>
+
+        <section class="section" id="publications">
+            <h2>Selected Publications</h2>
+            <ul class="list-disc ml-5">
+                <li>Yamin, M. M., Katt, B., & Gkioulos, V. (2020). Cyber ranges and security testbeds: Scenarios, functions, tools and architecture. <i>Computers & Security</i>, 88, 101636.</li>
+                <li>Yamin, M. M., Ullah, M., Ullah, H., & Katt, B. (2021). Weaponized AI for cyber attacks. <i>Journal of Information Security and Applications</i>, 57, 102722.</li>
+                <li>Yamin, M. M., Katt, B., & Nowostawski, M. (2021). Serious games as a tool to model attack and defense scenarios for cyber-security exercises. <i>Computers & Security</i>, 110, 102450.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="lectures">
+            <h2>Lectures and Presentations</h2>
+            <ul class="list-disc ml-5">
+                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/defcon32.pdf" target="_blank" rel="noopener" aria-label="DEFCON 32 Presentation">DEFCON 32 (RTV) Combining Uncensored and Censored LLMs for Ransomware Generation</a></li>
+                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/NCR-MY.pdf" target="_blank" rel="noopener" aria-label="Norwegian Cyber Range Presentation">Norwegian Cyber Range 2023 status</a></li>
+                <li><a href="https://www.slideshare.net/DefCamp/implementation-of-information-security-techniques-on-modern-android-based-kiosk-atmremittance-machines" target="_blank" rel="noopener" aria-label="Defcamp 2018 Presentation">Defcamp 2018 Implementation of information security techniques on modern android based Kiosk ATM/remittance machines (SlideShare)</a></li>
+                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/Mudassar-slides.pdf" target="_blank" rel="noopener" aria-label="Interpol Thinkathon 2018 Presentation">Interpol Thinkathon 2018 Smart city policing concept</a></li>
+            </ul>
+        </section>
+
+        <section class="section" id="awards">
+            <h2>Awards</h2>
+            <p>Innovation medal from Interpol for developing smart city policing concepts</p>
+        </section>
+
+        <section class="section" id="languages">
+            <h2>Languages</h2>
+            <p>English</p>
+        </section>
+
+        <section class="section" id="news">
+            <h2>News</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="news-card">
+                    <a href="https://gemini.no/2024/11/hacking-kan-bli-avgjorende-for-nasjonal-sikkerhet/" target="_blank" rel="noopener" aria-label="Read full article: Hacking could become crucial to national security">
+                        <h3 class="text-lg font-bold text-gray-600">Hacking could become crucial to national security</h3>
+                    </a>
+                    <p class="text-gray-500">Published: November 2024</p>
+                    <iframe src="https://gemini.no/2024/11/hacking-kan-bli-avgjorende-for-nasjonal-sikkerhet/" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Hacking could become crucial to national security"></iframe>
+                </div>
+                <div class="news-card">
+                    <a href="https://www.dn.no/innlegg/ki/falske-nyheter/desinformasjon/kunstig-intelligens-jakter-pa-desinformasjon/2-1-1704801" target="_blank" rel="noopener" aria-label="Read full article: Hacking could become crucial to national security">
+                        <h3 class="text-lg font-bold text-gray-600">Artificial intelligence hunts down disinformation</h3>
+                    </a>
+                    <p class="text-gray-500">Published: September 2024</p>
+                    <iframe src="https://www.dn.no/innlegg/ki/falske-nyheter/desinformasjon/kunstig-intelligens-jakter-pa-desinformasjon/2-1-1704801" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Hacking could become crucial to national security"></iframe>
+                </div>
+                <div class="news-card">
+                    <a href="https://www.digi.no/artikler/den-ma-tidlig-krokes-som-god-datasnok-skal-bli/537490" target="_blank" rel="noopener" aria-label="Read full article: To become a hacker you should start at an early age">
+                        <h3 class="text-lg font-bold text-gray-600">To become a hacker you should start at an early age</h3>
+                    </a>
+                    <p class="text-gray-500">Published: October 2023</p>
+                    <iframe src="https://www.digi.no/artikler/den-ma-tidlig-krokes-som-god-datasnok-skal-bli/537490" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of To become a hacker you should start at an early age"></iframe>
+                </div>
+                <div class="news-card">
+                    <a href="https://gemini.no/2023/03/nar-huset-ditt-sladrer-pa-deg/" target="_blank" rel="noopener" aria-label="Read full article: Norwegian research on the police of the future reaches the top of Interpol">
+                        <h3 class="text-lg font-bold text-gray-600">When your house gossips about you</h3>
+                    </a>
+                    <p class="text-gray-500">Published: March 2023</p>
+                    <iframe src="https://gemini.no/2023/03/nar-huset-ditt-sladrer-pa-deg/" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Norwegian research on the police of the future reaches the top of Interpol"></iframe>
+                </div>
+                <div class="news-card">
+                    <a href="https://www.politiforum.no/cyberkriminalitet-interpol-jens-petter-sandvik/norsk-forskning-pa-framtidens-politi-til-topps-i-interpol/148614" target="_blank" rel="noopener" aria-label="Read full article: Norwegian research on the police of the future reaches the top of Interpol">
+                        <h3 class="text-lg font-bold text-gray-600">Norwegian research on the police of the future reaches the top of Interpol</h3>
+                    </a>
+                    <p class="text-gray-500">Published: October 2018</p>
+                    <iframe src="https://www.politiforum.no/cyberkriminalitet-interpol-jens-petter-sandvik/norsk-forskning-pa-framtidens-politi-til-topps-i-interpol/148614" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Norwegian research on the police of the future reaches the top of Interpol"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="hobbies">
+            <h2>Hobbies and Travel</h2>
+            <div id="instagram-feed" class="text-center text-gray-500" aria-label="Instagram Feed">
+                <script src="https://static.elfsight.com/platform/platform.js" async data-lazy></script>
+                <div class="elfsight-app-3092489e-d6bc-4677-8d08-dc3845bd6433" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+            return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+                try {
+                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                    var firstSheetName = workbook.SheetNames[0];
+                    var worksheet = workbook.Sheets[firstSheetName];
+                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                    var filteredData = jsonData.filter(row => row.some(filledCell));
+                    var headerRowIndex = filteredData.findIndex((row, index) =>
+                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    );
+                    if (headerRowIndex === -1 || headerRowIndex > 25) {
+                        headerRowIndex = 0;
+                    }
+                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                    return csv;
+                } catch (e) {
+                    console.error(e);
+                    return "";
+                }
+            }
+            return gk_fileData[filename] || "";
+        }
+
+        // Smooth scrolling for sidebar links with debounce
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const scrollToSection = debounce((e) => {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href')?.substring(1);
+            if (!targetId) return;
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const offset = 20;
+                window.scrollTo({
+                    top: targetElement.getBoundingClientRect().top + window.pageYOffset - offset,
+                    behavior: 'smooth'
+                });
+                if (window.innerWidth <= 768) {
+                    toggleSidebar();
+                }
+            }
+        }, 100);
+
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.removeEventListener('click', scrollToSection);
+            anchor.addEventListener('click', scrollToSection);
+        });
+
+        // Toggle sidebar for mobile
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const hamburger = document.querySelector('.hamburger');
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Ensure sidebar visibility on resize
+        window.addEventListener('resize', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const hamburger = document.querySelector('.hamburger');
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('hidden', 'active');
+                hamburger.classList.remove('active');
+            } else {
+                sidebar.classList.add('hidden');
+                sidebar.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Initial sidebar state
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('hidden');
+            } else {
+                sidebar.classList.remove('hidden');
+            }
+        });
+
+        // Theme toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && window.innerWidth <= 768) {
+                const sidebar = document.querySelector('.sidebar');
+                if (!sidebar.classList.contains('hidden')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
