@@ -3,581 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Mudassar Yamin - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>Muhammad Hassan Dajana - Professional CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Embedded Tailwind CSS (minified subset for used classes) */
-        .fixed{position:fixed}.top-0{top:0}.left-0{left:0}.right-0{right:0}.z-1000{z-index:1000}.z-1100{z-index:1100}.m-0{margin:0}.mb-4{margin-bottom:1rem}.mx-0{margin-left:0;margin-right:0}.ml-5{margin-left:1.25rem}.mr-4{margin-right:1rem}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}.h-full{height:100%}.w-24{width:6rem}.w-full{width:100%}.h-64{height:16rem}.max-w-5xl{max-width:80rem}.cursor-pointer{cursor:pointer}.list-disc{list-style-type:disc}.overflow-y-auto{overflow-y:auto}.border{border-width:1px}.border-0{border-width:0}.border-gray-200{border-color:#E2E8F0}.rounded-lg{border-radius:0.5rem}.bg-white{background-color:#fff}.bg-gray-100{background-color:#F7FAFC}.bg-teal-500{background-color:#38B2AC}.bg-gray-800{background-color:#2D3748}.bg-gray-900{background-color:#1A202C}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-0{padding-left:0;padding-right:0}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.font-inter{font-family:'Inter',sans-serif}.font-poppins{font-family:'Poppins',sans-serif}.text-base{font-size:1rem}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}.font-bold{font-weight:700}.text-white{color:#fff}.text-gray-500{color:#6B7280}.text-gray-600{color:#4A5568}.text-gray-200{color:#E2E8F0}.text-teal-500{color:#38B2AC}.text-teal-700{color:#2C7A7B}.no-underline{text-decoration:none}.shadow{box-shadow:0 4px 6px rgba(0,0,0,0.1)}.transition{transition-property:all;transition-duration:300ms}.transform{transform:translate(0,0)}.hover\:translate-y-1:hover{transform:translateY(-0.25rem)}.hover\:shadow-lg:hover{box-shadow:0 10px 15px rgba(0,0,0,0.1)}.hover\:text-teal-700:hover{color:#2C7A7B}.hover\:underline:hover{text-decoration:underline}.hover\:bg-gray-50:hover{background-color:#F9FAFB}.hover\:bg-gray-700:hover{background-color:#374151}.relative{position:relative}.inline-flex{display:inline-flex}.gap-2{gap:0.5rem}.rounded-full{border-radius:9999px}.h-32{height:8rem}.w-32{width:8rem}.object-cover{object-fit:cover}.grid{display:grid}.gap-4{gap:1rem}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:1024px){.lg\:w-48{width:12rem}.lg\:ml-52{margin-left:13rem}.lg\:p-4{padding:1rem}.lg\:w-24{width:6rem}.lg\:h-24{height:6rem}}@media (max-width:768px){.md\:ml-0{margin-left:0}.md\:p-2{padding:0.5rem}.md\:w-full{width:100%}.md\:w-20{width:5rem}.md\:h-20{height:5rem}}
-        /* Custom Styles */
-        :root {
-            --primary: #38B2AC;
-            --primary-dark: #2C7A7B;
-            --bg-light: #F7FAFC;
-            --bg-dark: #1A202C;
-            --text-light: #4A5568;
-            --text-dark: #E2E8F0;
-        }
-        [data-theme="dark"] {
-            --bg-light: #1A202C;
-            --text-light: #E2E8F0;
-            --bg-dark: #2D3748;
-            --text-dark: #CBD5E0;
-        }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            margin: 0;
-            transition: background-color 0.3s, color 0.3s;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
         }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background-color: #2C3E50;
-            color: white;
-            padding: 1.5rem;
-            overflow-y: auto;
-            transform: translateX(0);
-            transition: transform 0.3s ease-in-out;
-            z-index: 1000;
-        }
-        .sidebar.hidden {
-            transform: translateX(-100%);
-        }
-        .sidebar a {
-            color: #CBD5E0;
-            text-decoration: none;
-            display: block;
-            padding: 0.75rem 0;
-            transition: color 0.3s, transform 0.2s;
-        }
-        .sidebar a:hover {
-            color: var(--primary);
-            transform: translateX(5px);
-        }
-        .content {
-            margin-left: 220px;
-            padding: 2rem;
-            max-width: 1200px;
-            transition: margin-left 0.3s ease-in-out;
-        }
-        .hamburger {
-            display: none;
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            z-index: 1100;
-            cursor: pointer;
-            padding: 0.5rem;
-            background: var(--primary);
-            border-radius: 4px;
-        }
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 3px;
-            background: white;
-            margin: 5px 0;
-            transition: all 0.3s ease-in-out;
-        }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-        .theme-toggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            z-index: 1100;
-            cursor: pointer;
-            padding: 0.5rem;
-            background: var(--primary);
-            border-radius: 50%;
-        }
-        .theme-toggle svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #2D3748;
-        }
-        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
-            color: var(--text-dark);
+        header {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
         h1 {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            color: var(--primary);
+            margin: 0;
+            font-size: 2.5em;
+            color: #2c7a7b;
         }
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 1.8rem);
+        .contact-info {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #555;
         }
-        h3 {
-            font-size: clamp(1.2rem, 3vw, 1.4rem);
-        }
-        p, li {
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
-        }
-        .section {
-            background: white;
-            padding: clamp(1rem, 3vw, 1.5rem);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        [data-theme="dark"] .section {
-            background: var(--bg-dark);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        a {
-            color: var(--primary);
+        .contact-info a {
+            color: #3182ce;
             text-decoration: none;
-            transition: color 0.3s;
         }
-        a:hover {
-            color: var(--primary-dark);
+        .contact-info a:hover {
             text-decoration: underline;
         }
-        .contact-info p {
-            margin: 0.5rem 0;
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        #instagram-feed {
-            border: 1px solid #E2E8F0;
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2c7a7b;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #285e61;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 20px;
             border-radius: 8px;
-            padding: 1rem;
-            min-height: 200px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #2f855a;
+            border-bottom: 2px solid #e6fffa;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        h2:hover {
+            color: #276749;
+        }
+        .entry {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .entry.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .entry h3 {
+            font-size: 1.3em;
+            margin: 0 0 5px;
+            color: #4a5568;
+        }
+        .entry .date {
+            font-style: italic;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .skills {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #EDF2F7;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        [data-theme="dark"] #instagram-feed {
-            border-color: #4A5568;
-            background: #2D3748;
+        .skill {
+            background-color: #e6fffa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #2c7a7b;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
         }
-        .profile-pic {
-            border-radius: 50%;
-            object-fit: cover;
-            width: 8rem;
-            height: 8rem;
-            margin-right: 1rem;
+        .skill:hover {
+            background-color: #b2f5ea;
+            transform: scale(1.05);
         }
-        .social-links svg {
-            width: 1.25rem;
-            height: 1.25rem;
-            fill: var(--primary);
-            transition: fill 0.3s;
+        .section-content {
+            display: block;
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
         }
-        .social-links a:hover svg {
-            fill: var(--primary-dark);
+        .section-content.collapsed {
+            max-height: 0;
         }
-        .news-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        [data-theme="dark"] .news-card {
-            background: var(--bg-dark);
-        }
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .news-card iframe {
-            width: 100%;
-            border: 0;
-            border-radius: 8px;
-        }
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 180px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            .content {
-                margin-left: 200px;
-                padding: 1.5rem;
-            }
-            .profile-pic {
-                width: 6rem;
-                height: 6rem;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                transform: translateX(-100%);
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
             }
-            .sidebar.active {
-                transform: translateX(0);
-            }
-            .content {
-                margin-left: 0;
-                padding: 1rem;
-            }
-            .hamburger {
-                display: block;
-            }
-            .profile-pic {
-                width: 5rem;
-                height: 5rem;
-            }
-        }
-        @media (max-width: 480px) {
             h1 {
-                font-size: clamp(1.8rem, 4.5vw, 2rem);
+                font-size: 2em;
             }
             h2 {
-                font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+                font-size: 1.5em;
             }
-            h3 {
-                font-size: clamp(1rem, 2.5vw, 1.2rem);
+            .entry h3 {
+                font-size: 1.2em;
             }
-            .section {
-                padding: 0.75rem;
+            .contact-info {
+                font-size: 1em;
             }
-            #instagram-feed {
-                min-height: 150px;
+            ul {
+                padding-left: 15px;
             }
-            .profile-pic {
-                width: 5rem;
-                height: 5rem;
+            .skills {
+                gap: 5px;
+            }
+            .skill {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                max-width: none;
+                font-size: 12pt;
+            }
+            header {
+                box-shadow: none;
+                border-bottom: none;
+            }
+            section {
+                box-shadow: none;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+            .skills {
+                page-break-inside: avoid;
+            }
+            nav {
+                display: none;
+            }
+            .section-content {
+                max-height: none !important;
+            }
+            .entry {
+                opacity: 1 !important;
+                transform: none !important;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hamburger" onclick="toggleSidebar()" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-        <svg viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-        </svg>
-    </div>
-    <div class="sidebar" role="navigation" aria-label="Main navigation">
-        <h3 class="text-xl font-bold mb-4 text-white">Navigation</h3>
-        <a href="#summary" aria-label="Go to Professional Summary">Professional Summary</a>
-        <a href="#experience" aria-label="Go to Work Experience">Work Experience</a>
-        <a href="#education" aria-label="Go to Education">Education</a>
-        <a href="#certifications" aria-label="Go to Certifications">Certifications</a>
-        <a href="#skills" aria-label="Go to Skills">Skills</a>
-        <a href="#publications" aria-label="Go to Publications">Publications</a>
-        <a href="#lectures" aria-label="Go to Lectures and Presentations">Lectures & Presentations</a>
-        <a href="#awards" aria-label="Go to Awards">Awards</a>
-        <a href="#languages" aria-label="Go to Languages">Languages</a>
-        <a href="#news" aria-label="Go to News">News</a>
-        <a href="#hobbies" aria-label="Go to Hobbies and Travel">Hobbies & Travel</a>
-    </div>
-    <div class="content">
-        <header class="section" id="header">
-            <div class="flex items-center">
-                <img src="https://assets.weforum.org/author/image/tjfaMD_sZS9hdOuEHOrH4AhMiN2KpNfJJ7W7jGU76ug.jpeg" alt="Muhammad Hassan Dajana Profile Picture" class="profile-pic">
-                <h1>Muhammad Hassan Dajana</h1>
+    <header>
+        <h1>Muhammad Hassan Dajana</h1>
+        <div class="contact-info">
+            +92-3115824569 | muhammadhassandajana@gmail.com | <a href="https://linkedin.com/in/hassandajana" target="_blank">linkedin.com/in/hassandajana</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#summary">Summary</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#skills">Skills</a>
+    </nav>
+
+    <section id="summary">
+        <h2 onclick="toggleSection(this)">Professional Summary</h2>
+        <div class="section-content">
+            <p>Fulbright Scholar with expertise in climate adaptation, renewable energy policy, and sustainability education. Led research on Massachusetts solar policies, developed climate adaptation strategies for U.S. cities, and designed award-winning education programs in Pakistan. Experienced in curriculum design, stakeholder engagement, and capacity-building, with a proven record of impact. Recognized by the World Economic Forum, Schwab Foundation, U.S. Mission in Pakistan, and the U.S. State Department for leadership in advancing climate and energy solutions.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 onclick="toggleSection(this)">Education</h2>
+        <div class="section-content">
+            <div class="entry">
+                <h3>Master of Science in Community Climate Adaptation (3.76/4)</h3>
+                <p>Worcester Polytechnic Institute (WPI), Worcester, MA</p>
+                <div class="date">August 2023 – December 2024</div>
             </div>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:muhammadhassandajana@gmail.com" aria-label="Email Muhammad Hassan Dajana">muhammadhassandajana@gmail.com</a></p>
-                <p>Location: Islamabad, Pakistan</p>
-                <div class="social-links flex gap-2">
-                    <a href="https://scholar.google.com/citations?user=Do_xVQMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="View Google Scholar Profile">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M5.81 8.77L4 17h4l1.81-8.23L7.97 7.64 5.81 8.77zm10.69 2.46L14.69 17h4l1.81-8.23-1.81-1.13-1.69 2.59zM12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path>
-                        </svg>
-                        Google Scholar
-                    </a>
-                    <a href="https://www.linkedin.com/in/mudassaryamin/" target="_blank" rel="noopener" aria-label="View LinkedIn Profile">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
+            <div class="entry">
+                <h3>Bachelor of Science in Civil Engineering (3.30/4)</h3>
+                <p>University of Engineering and Technology (UET), Taxila, Pakistan</p>
+                <div class="date">October 2015 - October 2019</div>
             </div>
-        </header>
-
-        <section class="section" id="summary">
-            <h2>Professional Summary</h2>
-            <p>Associate Professor at Norwegian University of Science and Technology (NTNU) with expertise in system security, penetration testing, and cyber ranges. Experienced Information Security consultant with multiple certifications and a Ph.D. in Cyber Security.</p>
-        </section>
-
-        <section class="section" id="experience">
-            <h2>Work Experience</h2>
-            <h3>Associate Professor</h3>
-            <p>Department of Information and Communication Technology, NTNU</p>
-            <p>2023 - Present</p>
-            <ul class="list-disc ml-5">
-                <li>Conduct research in system security, penetration testing, security assessment, and intrusion detection</li>
-                <li>Teach courses in cybersecurity</li>
-                <li>Supervise students</li>
-            </ul>
-            <h3>Postdoctoral Researcher</h3>
-            <p>NTNU</p>
-            <p>2022 - 2023</p>
-            <p>Project: "AI-based cyber range scenarios management and training"</p>
-            <h3>Ph.D. Candidate</h3>
-            <p>NTNU</p>
-            <p>2018 - 2022</p>
-            <p>Thesis: "Modelling and Analyzing Attack-Defense Scenarios for Cyber-Ranges"</p>
-            <h3>Information Security Consultant</h3>
-            <p>Prior to 2018</p>
-            <ul class="list-disc ml-5">
-                <li>Served multiple government and private clients</li>
-                <li>Performed security assessment of major financial institutions and critical infrastructure</li>
-            </ul>
-        </section>
-
-        <section class="section" id="education">
-            <h2>Education</h2>
-            <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/papers/Muhammad%20Mudassar%20Yamin.pdf" target="_blank" rel="noopener" aria-label="Ph.D. in Cyber Security, NTNU, 2022">Ph.D. in Cyber Security, NTNU, 2022</a></li>
-        </section>
-
-        <section class="section" id="certifications">
-            <h2>Certifications</h2>
-            <ul class="list-disc ml-5">
-                <li>OSCE (Offensive Security Certified Expert)</li>
-                <li>OSCP (Offensive Security Certified Professional)</li>
-                <li>LPT-MASTER (Licensed Penetration Tester Master)</li>
-                <li>CEH (Certified Ethical Hacker)</li>
-                <li>CHFI (Computer Hacking Forensic Investigator)</li>
-                <li>CPTE (Certified Penetration Testing Engineer)</li>
-                <li>CISSO (Certified Information Systems Security Officer)</li>
-                <li>CBP (Certified Blockchain Professional)</li>
-            </ul>
-        </section>
-
-        <section class="section" id="skills">
-            <h2>Skills</h2>
-            <ul class="list-disc ml-5">
-                <li>System security</li>
-                <li>Penetration testing</li>
-                <li>Security assessment</li>
-                <li>Intrusion detection</li>
-                <li>Cyber ranges</li>
-                <li>Research and development</li>
-                <li>Teaching and supervision</li>
-            </ul>
-        </section>
-
-        <section class="section" id="publications">
-            <h2>Selected Publications</h2>
-            <ul class="list-disc ml-5">
-                <li>Yamin, M. M., Katt, B., & Gkioulos, V. (2020). Cyber ranges and security testbeds: Scenarios, functions, tools and architecture. <i>Computers & Security</i>, 88, 101636.</li>
-                <li>Yamin, M. M., Ullah, M., Ullah, H., & Katt, B. (2021). Weaponized AI for cyber attacks. <i>Journal of Information Security and Applications</i>, 57, 102722.</li>
-                <li>Yamin, M. M., Katt, B., & Nowostawski, M. (2021). Serious games as a tool to model attack and defense scenarios for cyber-security exercises. <i>Computers & Security</i>, 110, 102450.</li>
-            </ul>
-        </section>
-
-        <section class="section" id="lectures">
-            <h2>Lectures and Presentations</h2>
-            <ul class="list-disc ml-5">
-                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/defcon32.pdf" target="_blank" rel="noopener" aria-label="DEFCON 32 Presentation">DEFCON 32 (RTV) Combining Uncensored and Censored LLMs for Ransomware Generation</a></li>
-                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/NCR-MY.pdf" target="_blank" rel="noopener" aria-label="Norwegian Cyber Range Presentation">Norwegian Cyber Range 2023 status</a></li>
-                <li><a href="https://www.slideshare.net/DefCamp/implementation-of-information-security-techniques-on-modern-android-based-kiosk-atmremittance-machines" target="_blank" rel="noopener" aria-label="Defcamp 2018 Presentation">Defcamp 2018 Implementation of information security techniques on modern android based Kiosk ATM/remittance machines (SlideShare)</a></li>
-                <li><a href="https://github.com/muhammadmudassaryamin/CV/blob/main/lectures/Mudassar-slides.pdf" target="_blank" rel="noopener" aria-label="Interpol Thinkathon 2018 Presentation">Interpol Thinkathon 2018 Smart city policing concept</a></li>
-            </ul>
-        </section>
-
-        <section class="section" id="awards">
-            <h2>Awards</h2>
-            <p>Innovation medal from Interpol for developing smart city policing concepts</p>
-        </section>
-
-        <section class="section" id="languages">
-            <h2>Languages</h2>
-            <p>English</p>
-        </section>
-
-        <section class="section" id="news">
-            <h2>News</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="news-card">
-                    <a href="https://gemini.no/2024/11/hacking-kan-bli-avgjorende-for-nasjonal-sikkerhet/" target="_blank" rel="noopener" aria-label="Read full article: Hacking could become crucial to national security">
-                        <h3 class="text-lg font-bold text-gray-600">Hacking could become crucial to national security</h3>
-                    </a>
-                    <p class="text-gray-500">Published: November 2024</p>
-                    <iframe src="https://gemini.no/2024/11/hacking-kan-bli-avgjorende-for-nasjonal-sikkerhet/" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Hacking could become crucial to national security"></iframe>
-                </div>
-                <div class="news-card">
-                    <a href="https://www.dn.no/innlegg/ki/falske-nyheter/desinformasjon/kunstig-intelligens-jakter-pa-desinformasjon/2-1-1704801" target="_blank" rel="noopener" aria-label="Read full article: Hacking could become crucial to national security">
-                        <h3 class="text-lg font-bold text-gray-600">Artificial intelligence hunts down disinformation</h3>
-                    </a>
-                    <p class="text-gray-500">Published: September 2024</p>
-                    <iframe src="https://www.dn.no/innlegg/ki/falske-nyheter/desinformasjon/kunstig-intelligens-jakter-pa-desinformasjon/2-1-1704801" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Hacking could become crucial to national security"></iframe>
-                </div>
-                <div class="news-card">
-                    <a href="https://www.digi.no/artikler/den-ma-tidlig-krokes-som-god-datasnok-skal-bli/537490" target="_blank" rel="noopener" aria-label="Read full article: To become a hacker you should start at an early age">
-                        <h3 class="text-lg font-bold text-gray-600">To become a hacker you should start at an early age</h3>
-                    </a>
-                    <p class="text-gray-500">Published: October 2023</p>
-                    <iframe src="https://www.digi.no/artikler/den-ma-tidlig-krokes-som-god-datasnok-skal-bli/537490" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of To become a hacker you should start at an early age"></iframe>
-                </div>
-                <div class="news-card">
-                    <a href="https://gemini.no/2023/03/nar-huset-ditt-sladrer-pa-deg/" target="_blank" rel="noopener" aria-label="Read full article: Norwegian research on the police of the future reaches the top of Interpol">
-                        <h3 class="text-lg font-bold text-gray-600">When your house gossips about you</h3>
-                    </a>
-                    <p class="text-gray-500">Published: March 2023</p>
-                    <iframe src="https://gemini.no/2023/03/nar-huset-ditt-sladrer-pa-deg/" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Norwegian research on the police of the future reaches the top of Interpol"></iframe>
-                </div>
-                <div class="news-card">
-                    <a href="https://www.politiforum.no/cyberkriminalitet-interpol-jens-petter-sandvik/norsk-forskning-pa-framtidens-politi-til-topps-i-interpol/148614" target="_blank" rel="noopener" aria-label="Read full article: Norwegian research on the police of the future reaches the top of Interpol">
-                        <h3 class="text-lg font-bold text-gray-600">Norwegian research on the police of the future reaches the top of Interpol</h3>
-                    </a>
-                    <p class="text-gray-500">Published: October 2018</p>
-                    <iframe src="https://www.politiforum.no/cyberkriminalitet-interpol-jens-petter-sandvik/norsk-forskning-pa-framtidens-politi-til-topps-i-interpol/148614" class="h-64" sandbox="allow-scripts allow-same-origin" loading="lazy" aria-label="Preview of Norwegian research on the police of the future reaches the top of Interpol"></iframe>
-                </div>
+            <div class="entry">
+                <h3>Global Undergraduate Semester Exchange Program Scholar</h3>
+                <p>University of Evansville, Evansville, IN</p>
+                <div class="date">August 2018 – December 2018</div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section" id="hobbies">
-            <h2>Hobbies and Travel</h2>
-            <div id="instagram-feed" class="text-center text-gray-500" aria-label="Instagram Feed">
-                <script src="https://static.elfsight.com/platform/platform.js" async data-lazy></script>
-                <div class="elfsight-app-3092489e-d6bc-4677-8d08-dc3845bd6433" data-elfsight-app-lazy></div>
+    <section id="experience">
+        <h2 onclick="toggleSection(this)">Professional Experience</h2>
+        <div class="section-content">
+            <div class="entry">
+                <h3>Growth & Fundraising Strategist at Taleemabad</h3>
+                <div class="date">February 2025 – Present</div>
+                <ul>
+                    <li>Led fundraising for one of the largest ed tech startups in Pakistan that has directly reached 10 million users.</li>
+                    <li>Work with diverse stakeholders nationally and internationally, have submitted grants amounting to 2M USD.</li>
+                    <li>Worked with two national partners, closing deals to substantially increase the number of users.</li>
+                    <li>Presenting work at conferences in Islamabad and Sukkur, built a funder and fundraising pipeline.</li>
+                </ul>
             </div>
-        </section>
-    </div>
-    <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-            return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-                try {
-                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                    var firstSheetName = workbook.SheetNames[0];
-                    var worksheet = workbook.Sheets[firstSheetName];
-                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                    var filteredData = jsonData.filter(row => row.some(filledCell));
-                    var headerRowIndex = filteredData.findIndex((row, index) =>
-                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                    );
-                    if (headerRowIndex === -1 || headerRowIndex > 25) {
-                        headerRowIndex = 0;
-                    }
-                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
-                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                    return csv;
-                } catch (e) {
-                    console.error(e);
-                    return "";
-                }
-            }
-            return gk_fileData[filename] || "";
-        }
+            <div class="entry">
+                <h3>Renewable Energy Researcher at WPI</h3>
+                <div class="date">June 2024 – August 2024</div>
+                <ul>
+                    <li>Conducted an analysis of Massachusetts solar energy policies, identifying regulatory challenges and opportunities for scaling renewable energy solutions.</li>
+                    <li>Assessed the impact of solar incentives and financing mechanisms on community adaptation of renewable energy projects. The challenges due to the interconnection queue & the impact of siting policies on projects.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Sustainability & Resilience Consultant for the City of Worcester, MA</h3>
+                <div class="date">August 2023 – December 2024</div>
+                <ul>
+                    <li>Led research to create a winter climate adaptation plan for Worcester, MA.</li>
+                    <li>Analyzed historical weather data (1950-2023) and projected climate trends (2030 – 2090).</li>
+                    <li>Surveyed 565 residents and conducted 38 semi-structured interviews with city officials, residents, utility providers, and climate experts to identify infrastructure vulnerabilities, social risks & adaptation strategies.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Program Manager at Amal Academy</h3>
+                <div class="date">June 2022 - July 2023</div>
+                <ul>
+                    <li>Facilitated the learning of 158 young adults through a 3-month career development fellowship, with a success rate of 80% indicating they were able to achieve job/internship/study abroad opportunities as determined in the pre-fellowship survey.</li>
+                    <li>Facilitated the development of 19 impactful social and environmental projects, positively impacting 2200+ people across Pakistan.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Curriculum Consultant at Chiraagh</h3>
+                <div class="date">Jul 2022 - August 2022</div>
+                <ul>
+                    <li>Worked alongside a team of 5 members to design a two-week-long summer camp for a school in Multan.</li>
+                    <li>25 kids benefited from the summer camp</li>
+                    <li>The curriculum was based on 5 values, which were kindness, empathy, grit, resilience, and empathy.</li>
+                    <li>35+ activities developed, 10 relevant & contextual stories curated on each value, delivered in Urdu & English.</li>
+                    <li>Pre and post-summer camp assessment & feedback mechanisms developed and trainers trained</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Teaching Fellow at Teach For Pakistan</h3>
+                <div class="date">Jul 2020 - Jun 2022</div>
+                <ul>
+                    <li>Reduced academic achievement gaps by an average of 2 years in a classroom of 50 pupils through Socratic instruction and hands-on exercises.</li>
+                    <li>Led TFP’s first STEM Olympiad in Islamabad, leading a team of 37 volunteers; 4,312 students from 29 low-resource government schools benefited.</li>
+                    <li>Master of Ceremonies of the STEM Olympiad, organizer of three organization-wide connection events, oath taker, and commencement speaker at graduation.</li>
+                    <li>Raised PKR 100,000 to set up a library of 350 books, cataloged into 7 different reading levels, and developed a 10-week Basic English literacy program as a community partnership project.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        // Smooth scrolling for sidebar links with debounce
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
+    <section id="projects">
+        <h2 onclick="toggleSection(this)">Social Impact Projects</h2>
+        <div class="section-content">
+            <div class="entry">
+                <h3>Project Regrowth Lead</h3>
+                <div class="date">February 2025 - May 2025</div>
+                <ul>
+                    <li>Led a team of 6 young leaders, curated a three-phase climate adaptation project, successfully won a grant of £2,000 from the Queen’s Commonwealth executed project in Islamabad and Lahore.</li>
+                    <li>Phase#1 included an urban forest plantation, and 400 native trees were planted. Phase 2 involved the creation of monetizable paper products from waste, and phase 3 was a climate symposium engaging young leaders.</li>
+                    <li>Lead the team in project curation, finance management, logistics, and stakeholder management.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Project Head Journalism for Climate Resilience</h3>
+                <div class="date">November 2023 – February 2024</div>
+                <ul>
+                    <li>Led a team of 4 members to develop a 3-hour-long workshop about reporting on climate change.</li>
+                    <li>Curated a training document and slide deck, received 170 expressions of interest, and trained 30 journalists.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Project Co-Head Green Blue Rawalpindi</h3>
+                <div class="date">March 2022 – August 2023</div>
+                <ul>
+                    <li>Led a team of 13 volunteers to create a four-pronged climate action intervention project in Rawalpindi.</li>
+                    <li>Our team planted 6,000+ Indigenous trees and created a native tree plantation guide, a climate manifesto as a call to action, and documentaries on the processes involved to replicate the idea elsewhere.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Project Facilitator at Climate Action and Advocacy Club</h3>
+                <div class="date">January 2023 - February 2023</div>
+                <ul>
+                    <li>Facilitated the learning and development of 10 7th-grade students on climate education and action through an 8-week, 6-tier curriculum focused on community-centric solutions to climate change.</li>
+                    <li>The students co-curated a community action project that impacted 50 community members, utilizing 5 different activities. It was recognized as a teacher-led climate change solution presented at COP28.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Project Leader, Plastic Free Pakistan</h3>
+                <div class="date">April 2019 – December 2022</div>
+                <ul>
+                    <li>Led a team of 13 volunteers to mitigate single-use plastic use in Pakistan, securing ~$1400 through grants.</li>
+                    <li>Conducted 15 awareness sessions, and 3 action projects, distributed 33 dozen fabric bags, impacting 2300+ people, and mobilizing 40 community volunteers, disposing of 8 kg of trash.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Male Spokesperson Our Green Masjids</h3>
+                <div class="date">Apr 2019 - Nov 2019</div>
+                <ul>
+                    <li>Piloted a plastic waste recycling mechanism that involved local municipality bodies and religious seminaries.</li>
+                    <li>Conducting hands-on climate action and sustainability training for 80 religious seminary students.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        const scrollToSection = debounce((e) => {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href')?.substring(1);
-            if (!targetId) return;
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                const offset = 20;
-                window.scrollTo({
-                    top: targetElement.getBoundingClientRect().top + window.pageYOffset - offset,
+    <section id="achievements">
+        <h2 onclick="toggleSection(this)">Achievements</h2>
+        <div class="section-content">
+            <ul>
+                <li>Fulbright Scholar from Pakistan 2023.</li>
+                <li>Agenda Contributor for World Economic Forum’s Centre for Nature and Climate & Dawn</li>
+                <li>Climate Education and Leadership Fund Review Committee Member, Teach For All 2023-2025.</li>
+                <li>US EPA - Environmental Education Grants Reviewer 2024.</li>
+                <li>Selected as a Youth & Social Innovation Leader by the Schwab Foundation for Social Entrepreneurship due to my work on climate change in Pakistan. Invited to the Schwab Summit in Seoul, South Korea, 2025.</li>
+                <li>Invited by WEF to Tianjin, China, as the sole youth leader on climate from Pakistan for Summer Davos 2023.</li>
+                <li>Our Green Blue Rawalpindi showcased at WEF HQ, invited to participate as a hub and project leader in 2022.</li>
+                <li>Pakistan US Alumni Network Young Emerging Leader Award Recipient 2019.</li>
+                <li>Successfully won 7 competitive grants amounting to ~16,500$ to initiate impactful grassroots projects.</li>
+                <li>Fellow at Teach for Pakistan 2020 (2% selection rate). UGRAD Scholar 2018 (1% selection rate).</li>
+                <li>Best Civil Engineering Undergraduate Project UET Taxila (out of 200 graduating students).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 onclick="toggleSection(this)">Skills</h2>
+        <div class="section-content">
+            <div class="skills">
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Research</span>
+                <span class="skill">Climate Adaptation</span>
+                <span class="skill">Public Speaking</span>
+                <span class="skill">Communication Skills</span>
+                <span class="skill">Risk Analysis</span>
+                <span class="skill">Stakeholder Engagement</span>
+                <span class="skill">Problem Solving</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                target.scrollIntoView({
                     behavior: 'smooth'
                 });
-                if (window.innerWidth <= 768) {
-                    toggleSidebar();
+                // Expand the section if collapsed
+                const content = target.querySelector('.section-content');
+                if (content.classList.contains('collapsed')) {
+                    toggleSection(target.querySelector('h2'));
                 }
-            }
-        }, 100);
-
-        document.querySelectorAll('.sidebar a').forEach(anchor => {
-            anchor.removeEventListener('click', scrollToSection);
-            anchor.addEventListener('click', scrollToSection);
+            });
         });
 
-        // Toggle sidebar for mobile
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            const hamburger = document.querySelector('.hamburger');
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('active');
-            hamburger.classList.toggle('active');
+        // Toggle section visibility
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                content.classList.add('collapsed');
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.classList.remove('collapsed');
+                // Trigger animation for entries in this section
+                observeEntries();
+            }
         }
 
-        // Ensure sidebar visibility on resize
-        window.addEventListener('resize', () => {
-            const sidebar = document.querySelector('.sidebar');
-            const hamburger = document.querySelector('.hamburger');
-            if (window.innerWidth > 768) {
-                sidebar.classList.remove('hidden', 'active');
-                hamburger.classList.remove('active');
-            } else {
-                sidebar.classList.add('hidden');
-                sidebar.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
+        // Initialize sections as expanded
+        document.querySelectorAll('.section-content').forEach(content => {
+            content.style.maxHeight = content.scrollHeight + 'px';
         });
 
-        // Initial sidebar state
-        document.addEventListener('DOMContentLoaded', () => {
-            const sidebar = document.querySelector('.sidebar');
-            if (window.innerWidth <= 768) {
-                sidebar.classList.add('hidden');
-            } else {
-                sidebar.classList.remove('hidden');
-            }
-        });
+        // Intersection Observer for animating entries
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-        // Theme toggle
-        function toggleTheme() {
-            const body = document.body;
-            const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', currentTheme);
-            localStorage.setItem('theme', currentTheme);
+        function observeEntries() {
+            document.querySelectorAll('.entry:not(.visible)').forEach(entry => {
+                observer.observe(entry);
+            });
         }
 
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.body.setAttribute('data-theme', savedTheme);
-        });
-
-        // Keyboard navigation for accessibility
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && window.innerWidth <= 768) {
-                const sidebar = document.querySelector('.sidebar');
-                if (!sidebar.classList.contains('hidden')) {
-                    toggleSidebar();
-                }
-            }
-        });
+        // Initial observation
+        observeEntries();
     </script>
 </body>
 </html>
