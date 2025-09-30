@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Hassan Dajana - Professional CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -76,7 +77,8 @@
             margin-bottom: 20px;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: calc(var(--order) * 0.2s);
         }
         .entry.visible {
             opacity: 1;
@@ -111,11 +113,23 @@
             border-radius: 20px;
             color: #2c7a7b;
             font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .skill:hover {
             background-color: #b2f5ea;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(44, 122, 123, 0.2);
+        }
+        .skill i {
+            font-size: 1.1em;
+            color: #2c7a7b;
+            transition: color 0.3s;
+        }
+        .skill:hover i {
+            color: #285e61;
         }
         .section-content {
             display: block;
@@ -161,6 +175,10 @@
             .skill {
                 padding: 6px 12px;
                 font-size: 0.9em;
+                gap: 6px;
+            }
+            .skill i {
+                font-size: 1em;
             }
             nav a {
                 display: block;
@@ -197,6 +215,10 @@
             .entry {
                 opacity: 1 !important;
                 transform: none !important;
+                animation: none !important;
+            }
+            .skill i {
+                display: none;
             }
         }
     </style>
@@ -228,17 +250,17 @@
     <section id="education">
         <h2 onclick="toggleSection(this)">Education</h2>
         <div class="section-content">
-            <div class="entry">
+            <div class="entry" style="--order: 1;">
                 <h3>Master of Science in Community Climate Adaptation (3.76/4)</h3>
                 <p>Worcester Polytechnic Institute (WPI), Worcester, MA</p>
                 <div class="date">August 2023 – December 2024</div>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 2;">
                 <h3>Bachelor of Science in Civil Engineering (3.30/4)</h3>
                 <p>University of Engineering and Technology (UET), Taxila, Pakistan</p>
                 <div class="date">October 2015 - October 2019</div>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 3;">
                 <h3>Global Undergraduate Semester Exchange Program Scholar</h3>
                 <p>University of Evansville, Evansville, IN</p>
                 <div class="date">August 2018 – December 2018</div>
@@ -249,7 +271,7 @@
     <section id="experience">
         <h2 onclick="toggleSection(this)">Professional Experience</h2>
         <div class="section-content">
-            <div class="entry">
+            <div class="entry" style="--order: 1;">
                 <h3>Growth & Fundraising Strategist at Taleemabad</h3>
                 <div class="date">February 2025 – Present</div>
                 <ul>
@@ -259,7 +281,7 @@
                     <li>Presenting work at conferences in Islamabad and Sukkur, built a funder and fundraising pipeline.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 2;">
                 <h3>Renewable Energy Researcher at WPI</h3>
                 <div class="date">June 2024 – August 2024</div>
                 <ul>
@@ -267,7 +289,7 @@
                     <li>Assessed the impact of solar incentives and financing mechanisms on community adaptation of renewable energy projects. The challenges due to the interconnection queue & the impact of siting policies on projects.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 3;">
                 <h3>Sustainability & Resilience Consultant for the City of Worcester, MA</h3>
                 <div class="date">August 2023 – December 2024</div>
                 <ul>
@@ -276,7 +298,7 @@
                     <li>Surveyed 565 residents and conducted 38 semi-structured interviews with city officials, residents, utility providers, and climate experts to identify infrastructure vulnerabilities, social risks & adaptation strategies.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 4;">
                 <h3>Program Manager at Amal Academy</h3>
                 <div class="date">June 2022 - July 2023</div>
                 <ul>
@@ -284,7 +306,7 @@
                     <li>Facilitated the development of 19 impactful social and environmental projects, positively impacting 2200+ people across Pakistan.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 5;">
                 <h3>Curriculum Consultant at Chiraagh</h3>
                 <div class="date">Jul 2022 - August 2022</div>
                 <ul>
@@ -295,7 +317,7 @@
                     <li>Pre and post-summer camp assessment & feedback mechanisms developed and trainers trained</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 6;">
                 <h3>Teaching Fellow at Teach For Pakistan</h3>
                 <div class="date">Jul 2020 - Jun 2022</div>
                 <ul>
@@ -311,7 +333,7 @@
     <section id="projects">
         <h2 onclick="toggleSection(this)">Social Impact Projects</h2>
         <div class="section-content">
-            <div class="entry">
+            <div class="entry" style="--order: 1;">
                 <h3>Project Regrowth Lead</h3>
                 <div class="date">February 2025 - May 2025</div>
                 <ul>
@@ -320,7 +342,7 @@
                     <li>Lead the team in project curation, finance management, logistics, and stakeholder management.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 2;">
                 <h3>Project Head Journalism for Climate Resilience</h3>
                 <div class="date">November 2023 – February 2024</div>
                 <ul>
@@ -328,7 +350,7 @@
                     <li>Curated a training document and slide deck, received 170 expressions of interest, and trained 30 journalists.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 3;">
                 <h3>Project Co-Head Green Blue Rawalpindi</h3>
                 <div class="date">March 2022 – August 2023</div>
                 <ul>
@@ -336,7 +358,7 @@
                     <li>Our team planted 6,000+ Indigenous trees and created a native tree plantation guide, a climate manifesto as a call to action, and documentaries on the processes involved to replicate the idea elsewhere.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 4;">
                 <h3>Project Facilitator at Climate Action and Advocacy Club</h3>
                 <div class="date">January 2023 - February 2023</div>
                 <ul>
@@ -344,7 +366,7 @@
                     <li>The students co-curated a community action project that impacted 50 community members, utilizing 5 different activities. It was recognized as a teacher-led climate change solution presented at COP28.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 5;">
                 <h3>Project Leader, Plastic Free Pakistan</h3>
                 <div class="date">April 2019 – December 2022</div>
                 <ul>
@@ -352,7 +374,7 @@
                     <li>Conducted 15 awareness sessions, and 3 action projects, distributed 33 dozen fabric bags, impacting 2300+ people, and mobilizing 40 community volunteers, disposing of 8 kg of trash.</li>
                 </ul>
             </div>
-            <div class="entry">
+            <div class="entry" style="--order: 6;">
                 <h3>Male Spokesperson Our Green Masjids</h3>
                 <div class="date">Apr 2019 - Nov 2019</div>
                 <ul>
@@ -386,14 +408,14 @@
         <h2 onclick="toggleSection(this)">Skills</h2>
         <div class="section-content">
             <div class="skills">
-                <span class="skill">Data Analysis</span>
-                <span class="skill">Research</span>
-                <span class="skill">Climate Adaptation</span>
-                <span class="skill">Public Speaking</span>
-                <span class="skill">Communication Skills</span>
-                <span class="skill">Risk Analysis</span>
-                <span class="skill">Stakeholder Engagement</span>
-                <span class="skill">Problem Solving</span>
+                <span class="skill"><i class="fas fa-chart-bar"></i> Data Analysis</span>
+                <span class="skill"><i class="fas fa-search"></i> Research</span>
+                <span class="skill"><i class="fas fa-leaf"></i> Climate Adaptation</span>
+                <span class="skill"><i class="fas fa-microphone"></i> Public Speaking</span>
+                <span class="skill"><i class="fas fa-comments"></i> Communication Skills</span>
+                <span class="skill"><i class="fas fa-shield-alt"></i> Risk Analysis</span>
+                <span class="skill"><i class="fas fa-users"></i> Stakeholder Engagement</span>
+                <span class="skill"><i class="fas fa-lightbulb"></i> Problem Solving</span>
             </div>
         </div>
     </section>
@@ -426,7 +448,7 @@
                 content.style.maxHeight = content.scrollHeight + 'px';
                 content.classList.remove('collapsed');
                 // Trigger animation for entries in this section
-                observeEntries();
+                observeEntries(content);
             }
         }
 
@@ -445,14 +467,17 @@
             });
         }, { threshold: 0.1 });
 
-        function observeEntries() {
-            document.querySelectorAll('.entry:not(.visible)').forEach(entry => {
+        function observeEntries(content) {
+            const entries = content.querySelectorAll('.entry:not(.visible)');
+            entries.forEach(entry => {
                 observer.observe(entry);
             });
         }
 
         // Initial observation
-        observeEntries();
+        document.querySelectorAll('.section-content').forEach(content => {
+            observeEntries(content);
+        });
     </script>
 </body>
 </html>
